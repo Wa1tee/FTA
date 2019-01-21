@@ -15,11 +15,13 @@
 \usepackage[hyphens]{url} %URLit ehjänä perille
 \usepackage{lipsum}
 
+
 % load tocbibind package 
 %   · do not include table of contents in itself
 %   · convert the name of bibliography to references
 \usepackage[nottoc]{tocbibind}
-%\settocbibname{References}
+%\settocbibname{Viitteet}
+
 
 % load sverb package
 %   · enhanced handling of verbatim stuff; listing environment
@@ -36,10 +38,13 @@
 % load itpackage 
 %   · additional defines and stuff
 
+\usepackage{biblatex}
+\addbibresource{viitteet.bib}
+
 
 \settocbibname{Viitteet}
 \setcounter{tocdepth}{2}
-%\hyphenation{k{\"a}m-me-nen-j{\"a}l-ki}% sään-nön-mu-kai-nen hy-väk-syt-tä-vyys hy-väk-syn-näl-tään kier-ret-tä-vyy-del-tään mer-kit-tä-väs-ti bi-o-met-ri-sis-tä käyt-tö-oi-keu-den pyr-kii e-sit-tä-mi-nen mi-kä-li hyl-kää-mi-ses-tä bi-o-met-ri-seen}
+
 
 \begin{document}
 \noindent Antti Auranen
@@ -56,10 +61,7 @@
 \include{kaavat}
 \include{kuvat}
 
-\bibliographystyle{unsrtf}
-\bibliography{Viitteet}
-\addcontentsline{toc}{chapter}{Bibliography}
-
-
+\nocite{*}
+\printbibliography
 
 \end{document}
