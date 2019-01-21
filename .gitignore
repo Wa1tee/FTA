@@ -3,4 +3,4 @@
 !*.tex
 !*.bib
 !.gitignore
-!/images/*
+!./images/*
