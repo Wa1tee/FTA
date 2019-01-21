@@ -3,4 +3,6 @@
 !*.tex
 !*.bib
 !.gitignore
-!./images/*
+!*.svg
+!images
+!images/*
