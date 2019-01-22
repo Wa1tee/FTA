@@ -1,4 +1,4 @@
-#FTA LaTeX-harjoitus
+# FTA LaTeX-harjoitus
 
 Windows-ympäristössä kääntyy Powershellissä seuraavasti, mikäli Miktex on asennettu oikein: 
 ```
