@@ -10,7 +10,13 @@
 !origin_data/*
 !selkkari
 !selkkari/*
+!server
+!server/*
+*/node_modules/*
 
+!*.ts
+!*.json
+!*.lock
 !*.tex
 !*.bib
 !*.svg
