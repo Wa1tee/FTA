@@ -1,0 +1,73 @@
+% document is based on report class
+\documentclass[a4paper,12pt]{article}
+
+% load ams-packages for maths
+\usepackage{amssymb,amsthm,amsmath}
+
+% load babel-package for automatic hyphenation
+\usepackage[english,finnish]{babel}
+\usepackage[T1]{fontenc} % Tavutus ääkkösille
+\usepackage[utf8]{inputenc}
+
+\usepackage{ifpdf}
+\usepackage[pdftex]{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[hyphens]{url} %URLit ehjänä perille
+\usepackage{lipsum}
+\linespread{1.24} % riviväli 1.5
+
+
+% load tocbibind package 
+%   · do not include table of contents in itself
+%   · convert the name of bibliography to references
+\usepackage[nottoc]{tocbibind}
+%\settocbibname{Viitteet}
+
+
+% load sverb package
+%   · enhanced handling of verbatim stuff; listing environment
+%\usepackage{sverb}
+
+% load listings package
+%   · handle inclusion of source code
+\usepackage{listings}
+
+% load fancyheaders package
+%   · the actual headers and footers are set later
+\usepackage{fancyhdr}
+
+% load itpackage 
+%   · additional defines and stuff
+
+\usepackage{biblatex}
+\addbibresource{viitteet.bib}
+
+
+\settocbibname{Viitteet}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+\noindent Antti Auranen
+\hfill Tehty: 25.1.2019 \\
+Fysiikan harjoitustyöt AI \hfill Ohj.: Joku Fyysikko \\
+
+\vspace{1cm}
+\begin{center}
+\huge{Työn nimi}
+\end{center}
+\vspace{1.2cm}
+
+\noindent Tähän kirjoitetaan työn kuvaus lyhyesti.
+
+\section{Eka otsikko}
+
+Kuvaus 
+
+\selectlanguage{finnish}
+\pagenumbering{arabic}
+
+\nocite{*}
+\printbibliography
+
+\end{document}

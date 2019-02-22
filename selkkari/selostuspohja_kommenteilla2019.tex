@@ -1,0 +1,239 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amssymb,amsthm,amsmath}     % matemaatttiset merkit
+\usepackage[T1]{fontenc}                % skanditavutus
+%\usepackage[ansinew]{inputenc}   	% skandien syöttö (vaihtoehtoinen)
+\usepackage[utf8]{inputenc}           % skandien syöttö 
+\usepackage[finnish]{babel}       	% suomenkielinen tavutus
+%\usepackage[dvips]{graphicx} 		% Kuvat käyttöön (.eps)	vaihtoehtoinen seuraavan paketin kanssa
+\usepackage[pdftex]{graphicx}		% Kuvat käyttöön (.pdf, .png, .jpg ...)	
+\usepackage{multicol}
+
+\linespread{1.24}                      %riviväli 1.5
+ 
+\begin{document}
+
+%Yksilötyönä tehdylle selostukselle:
+\noindent Onni Opiskelija \hfill Tehty: 13.5.2020\\%Täytä nimi ja mittauspäivämäärä
+Fysiikan harjoitustyöt II\hfill Ohj.: O. Ohjaaja \\% Kurssi jota käy ja työvuoron ohjaajan nimi.
+
+%Parityönä tehdylle selostukselle: (poista %-merkit seuraavien rivien alusta ja lisää %-merkit yllä olevien rivien alkuun.) 
+%\noindent Onni Opiskelija \hfill Tehty: 13.5.2002\\%Täytä nimet ja mittauspäivämäärä
+%Anni Opiskelija \hfill Ohj.: O. Ohjaaja \\
+%Fysiikan harjoitustyöt II \\% Kurssi jota käy ja työvuoron ohjaajan nimi.
+
+%--------------------------------------------------------------------------------
+
+\vspace{1cm} %pystysuuntainen 1 cm tila.
+\begin{center}
+\huge{Työn nimi} %Harjoitustyön nimi, esim. mekaniikka.
+\end{center}
+\vspace{1.2cm}
+
+%--------------------------------------------------------------------------------
+
+\noindent Työn kuvaus. %Täytä tähän työn tarkoitus lyhyesti (määritettävät suureet). Ei kuitenkaan toisteta työhjeessa esittettyä ilmiön kuvausta tai sen teoriaa. Tekstiin saa kappalevälin painamalla kaksikertaa enteriä.
+
+%--------------------------------------------------------------------------------
+
+\section{Pääotsikko 1 (osa1)} %Jos työssä on selkeästi toisistaan eroavia osia, otsikoidaan kukin erikseen. Jos työssä on vain yksi osa (kuten oheisessa yksinkertaisessa malliselostuksessa) tätä otsikointia ei tarvita. Tällöin aloitetaan otsikolla "Kaavat ja suureet" \section{Kaavat ja suureet} ja edetään mallin mukaisesti.
+
+Koeosuuden kuvaus. %Täytä tähän lyhyt kuvaus ko. koeosiosta.
+
+%Kunkin pääotsikon alla toistetaan seuraavat alakappaleet "Kaavat ja suureet", "Sähkökytkennät", "Mittauslaitteisto", "Havainnot ja laskut" ja "Virhetarkastelu". Kappaleet "Lopputulokset", "Kirjallisuusvertailu", "Omat päätelmät" ja "Kirjallisuus" tehdään koko työlle yhteisinä.
+
+%--------------------------------------------------------------------------------
+
+\subsection{Kaavat ja suureet}
+
+%1. Annetaan kaikki kaavat, joihin tulosten laskeminen perustuu (useimmiten annettu työohjeessa). Kaikki selostuksessa käytetyt kaavat esitellään ja indeksoidaan (numeroidaan), ylimääräisiä kaavoja ei esitetä. Kaavojen ulkoasun on oltava moitteeton. Kaavoissa on käytettävä samoja symboleja kuin työohjeessa.
+
+\begin{align} %Aloittaa matematiikkatilan.
+\frac{1}{2} m v_{\mathrm l} &= mgh \\ % & Tasaa pystysuunnassa rivit samaan kohtaan.
+v_{\mathrm l} &= v_{\mathrm 0} + at\\
+x &= x_{\mathrm 0} + v_{\mathrm 0} t + \frac{1}{2} a t^{2}
+\end{align}
+
+%2. Määritellään suureet, jotka esiintyvät kaavoissa: symbolit, merkitys ja yksikkö. Jos suure on vakio, annetaan myös sille laskuissa käytetty arvo (ellei sitä ole tarkoitus määrittää työssä).
+
+\begin{table}[h]
+\begin{center}
+\caption{Työssä käytetyt suureet ja niiden yksiköt}
+\label{kaytetytsuureet} %Nyt voit viitata taulukkoon tekstissä komennolla \ref{kaytetytsuureet}. Esim Työssä käytetyt suureet on esitelty taulukossa \ref{kaytetytsuureet}.
+\begin{tabular}{c|c|c} % {|l|c|c|}:ssa l tarkoittaa tasausta vasemmalle, c keskelle ja r oikealle. | merkeillä saadaan taas taulukkoon solujen väliset pystyviivat.
+Suure & Selitys & Yksikkö \\ \hline %\hline tekee taulukkoon vaakaviivan.
+$x$&Pudotusmatka&[m]\\  %taulukon solut erotetaan toisistaan & merkillä. \\ päättää rivin (rivinvaihto).
+$t$&Putoamisaika& [s]\\  
+$v_{\mathrm 0}$&Lähtönopeus&[m/s]\\  
+$v_{\mathrm l}$& Loppunopeus& [m/s]\\  
+$a$& Kuulan kiihtyvyys& [m/s$^2$]\\  
+$E$& Kuulan massa& [kg]
+\end{tabular}
+\end{center}
+\end{table}
+\pagebreak %sijoittaa taulukon tähän.
+
+%HUOM! Suureet kirjoitetaan kursiivilla ja yksiköt normaalina tekstinä. Matematiikkatilassa kaikki teksti on automaattisesti kursiivilla. Jos matematiikkatilassa (esim. laskuissa) käytetään yksiköitä, kommennolla \mathrm{kg} ne saadaan normaalina tekstinä ilman kursiivia. Kaava yms. ympäristöjen lisäksi matematiikkatilan saa käyttöön kirjoittamalla alkuun ja loppuun $ esim. $v_{\mathrm 0}$
+
+%--------------------------------------------------------------------------------
+
+\subsection{Sähkökytkennät}
+%Jos työssä on tehty sähkökytkentöjä ne esitetään tässä, muutoin tätä kappaletta ei tarvita.
+
+%Esimerkki kuvan liittämisestä:
+%\begin{figure}[h]  %Huomaa, että kuvan tulee sijaita samassa kansiossa tämän tiedoston kanssa.
+%\begin{center}
+%\includegraphics[width=0.6 \textwidth]{kytkenta.png} %älä käytä ääkkäsiä nimissä.
+%\caption{Kokeessa käytetty kytkentä.}\label{kytkenta} %kuvassa kuvateksti alapuolelle. Taulukossa yläpuolelle.
+%\end{center}
+%\end{figure}
+%\pagebreak
+
+%--------------------------------------------------------------------------------
+
+\subsection{Mittauslaitteisto}
+% Alaotsikon "Mittauslaitteisto" alla esitetään koejärjestelyjen periaatekaaviot sellaisissa tapauksissa, joissa ne työpaikalla olevan ohjeen mukaan vaaditaan.
+
+%--------------------------------------------------------------------------------
+
+\subsection{Havainnot ja laskut}
+% Kaikkien työselostuksessa esitettävien havaintojen ja tulosten on perustuttava mittausten aikana laadittuun mittauspöytäkirjaan. Mittauspöytäkirja on liitettävä selostukseen. Mittauspöytäkirja on kuitenkin hiljainen liite, johon ei selostuksessa saa viitata vaan kaikki havainnot tulee esitellä itse selostuksessa.
+
+%Tämä kappale aloitetaan antamalla lyhyt selvitys siitä, mitä suureita havaittiin, miten (millä tavalla/laitteella mitattiin) ja miksi (mihin mittaustulosta käytettiin). Tarkoitus ei kuitenkaan ole kuvata mittauslaitteiden yksityiskohtia tai niiden toimintaperiaatetta.
+
+% Esimerkiksi: Työssä havaittiin rautakuulan putoamiseen kulunut aika, kun se pudotettiin eri korkeuksista. Tämän avulla määriteltiin putoamiskiihtyvyys a... 
+
+%Tulosten osalta mainitaan mistä (edellä esitetystä) kaavasta ne on laskettu, tai mitä kaavoja käyttäen on johdettu lauseke, josta lopullinen tulos on laskettu. Jos kaava on johdettu, on se esitettävä laskuesimerkin yhteydessä.
+
+% Esimerkiksi: Mitattaustulokset ja näistä kaavan 3 avulla lasketut putoamiskiihtyvyyden $a$:n arvot on esitetty taulukossa \ref{tulokset}. Taulukossa esitetään myös tuloksista laskettu keskiarvo.
+
+%Havainnot ja tulokset soveltuvin osin samassa taulukossa. Taulukot numeroidaan ja taulukon päälle kirjoitetaan taulukon sisältöä kuvaava otsikko.Yksittäisten suureiden (esim. langan paksuus tms.) mittaustulokset tai mittauksissa käytetyn kohteen identifiointi (esim. lanka n:o 1) annetaan taulukon yläpuolella.
+
+
+\begin{table}[h]
+\begin{center}
+\caption{Mittaustulokset ja niistä laskettu putoamiskiihtyvyyden $a$ arvo jokaiselle korkeudelle ja näistä laskettu keskiarvo. }
+\label{tulokset}
+\begin{tabular}{c|c|c}
+$x$ [m]   & $t$ [s]  & $a$ [m/s$^{2}$] \\
+\hline
+10,0      & 1,43     & 9,81           \\
+15,0      & 1,75     & 9,79           \\
+20,0      & 2,03     & 9,75           \\
+25,0      & 2,26     & 9,77           \\
+30,0      & 2,48     & 9,72           \\
+35,0      & 2,67     & 9,81           \\
+40,0      & 2,87     & 9,72           \\
+45,0      & 3,03     & 9,83           \\
+50,0      & 3,18     & 9,87           \\
+\multicolumn{2}{r}{Keskiarvo} & 9,79          
+\end{tabular}
+\end{center}
+\end{table}
+
+%Mahdolliset graafiset kuvaajat esitetään tässä kappaleessa (tai selostuksen liitteenä). Tarvittaessa selitetään kuinka kuvaajasta on jokin suure määritetty ja annetaan sen arvo. Graafisten esitysten selkeyteen tulee kiinnittää erityistä huomiota ja niiden on noudatettava selostusohjeissa ja tutoriaaleissa esitettyjä sääntöjä. Erityisesti havaintopisteiden koordinaattien luettavuuteen on kiinnitettävä huomiota. Tämä edellyttää ainakin karkean koordinaattijaotuksen piirtämistä koko kuva-alueella. 
+
+%Jos havaittuihin pisteisiin sovitetaan käyrä tietokoneen avulla, on mainittava mihin menetelmään sovitus perustuu. 
+
+%Jos yksittäisistä tuloksista lasketaan keskiarvo, se esitetään taulukon alapuolella.
+
+%Jos lopputulosta määritettäessä jotkut havainnot joudutaan hylkäämään niiden selvän virheelisyyden vuoksi, on hylätyt havainnot (tai niiden antama tulos) selvästi ilmoitettava.
+
+%Selostuksen tässä osassa kirjataan myös vastaukset työhjeessa mahdollisesti annettuihin tehtäviin tarpeellisine selityksineen ja niihin liittyvine laskuineen.
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Laskuesimerkit}
+
+%Esitetään laskuesimerkit (kaavaan sijoitukset) kustakin kaavasta käyttämällä jotakin havaintoa (yksi esimerkki per kaava). Sekä kaava, sijoitus että lopputulos on kirjoitettava näkyviin, mutta välivaiheita ei yleensä tarvitse esittää. Laskuesimerkin tarkoitus on selvittää kuinka tulokset on saatu.
+
+%Laskuesimerkeissä suureiden yksiköt on merkittävä näkyviin.
+
+Putoamiskiihtyvyys laskettiin yhtälön 3 avulla ratkaisemalla siitä putoamisaika $t$. Alkunopeus $v_a = 0$, sillä kuulatiputettiin levosta. Nollatasoksi valittiin lähtöpiste ja positiivinen suunta valittiin osoittamaan alaspäin. Tällöin myös $x_{0} = 0$. Saadaan
+ 
+\begin{align*} %Ei numerointia rivien perään.
+x &= x_{0} + v_{0} t + \frac{1}{2} a t^{2} \\
+x &= \frac{1}{2} a t^{2} \\
+a &= \frac{2 x}{t^{2}}.
+\end{align*}
+Laskuesimerkkinä lasketaan mittauksen $x=20~\mathrm{m}$ arvot:
+\begin{align*}
+a &= \frac{2 x}{t^{2}} \\
+a &= \frac{2 \cdot 20~\mathrm{m} }{2,03~\mathrm{s}^{2}} \\ % Huomaa: \mathrm{m} poistaa m:stä kursivoinnin ja ylimääräinen ~ tekee välin lukuarvon ja yksikön väliin.
+a &= 9,753812~\frac{\mathrm{m}}{\mathrm{s}^{2}} \\
+a & \approx 9,75~\frac{\mathrm{m}}{\mathrm{s}^{2}}.
+\end{align*}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Virhetarkastelu}
+
+%Johdetaan tarpeelliset virhekaavat. Merkitään näkyviin perustellut havaittujen suureiden virheet (epätarkkuudet). Suoritetaan laskut.
+
+%Joskus riittää kvalitatiivinen virhetarkastelu (ilmoitettu työohjeessa). Tällöin matemaattista tarkastelua ei tarvita, vaan selvitetään tekijät, jotka vaikuttavat tuloksen tarkkuuteen ja esitetään näihin perustuva arvio tuloksen virherajoista.
+
+%Jos mittaus on suoritettu useilla menetelmillä eikä tuloksia ole aikaisemmin vertailtu, suoritetaan se tässä ja arvioidaan mahdollisten eroavuuksien syitä.
+
+%--------------------------------------------------------------------------------
+
+\section{Pääotsikko 2 (osa 2)}
+
+\subsection{Kaavat ja suureet}
+
+\subsection{Sähkökytkennät}
+
+\subsection{Mittauslaitteisto}
+
+\subsection{Havainnot ja laskut}
+
+\subsection{Virhetarkastelu}
+
+%--------------------------------------------------------------------------------
+
+\section{Pääotsikko 3 (osa 3)}
+
+\subsection{Kaavat ja suureet}
+
+\subsection{Sähkökytkennät}
+
+\subsection{Mittauslaitteisto}
+
+\subsection{Havainnot ja laskut}
+
+\subsection{Virhetarkastelu}
+
+%--------------------------------------------------------------------------------
+
+\section{Lopputulokset}
+
+%Lopputulokset merkitään näkyviin selkeästi virherajoineen. Suureiden yksiköt on luonnollisesti annettava. Kiinnitettävä huomiota tuloksen tarkkuuden oikeaoppiseen esittämiseen. Huomioi, että tässä kappaleessa kerätään lopputulokset yhteen koko työlle eikä tässä saa esittää mitään lukuarvoja/tuloksia, joita ei selostuksessa ole aiemmin mainittu.
+
+%--------------------------------------------------------------------------------
+
+\section{Kirjallisuusvertailu}
+
+%Ilmoitetaan määritetylle suureelle kirjallisuudessa annettu arvo. Lähde on mainittava (kirjoittaja, kirjan nimi, sivu, kustantaja, painopaikka, vuosi). Jos kirjoittajia on enemmän kuin kolme, voi käyttää "et al." -lyhennettä. Suoritetaan oman arvon ja kirjallisuusarvon vertailu ja esitetään johtopäätökset.
+
+%--------------------------------------------------------------------------------
+
+\section{Omat päätelmät}
+
+%Esitetään omat päätelmät, huomiot ja oivallukset työn suorittamisesta ja tuloksen tarkkuudesta ja siihen vaikuttavista tekijöistä. Jos jotkut havainnot jouduttiin hylkäämään lopputulosta määritettäessä, esitettävä oma arvio havaintojen virheellisyyden syistä.
+
+%--------------------------------------------------------------------------------
+
+
+\newpage
+\renewcommand{\refname}{Kirjallisuus}           %otsikon muutos
+
+\begin{thebibliography}{9}
+\bibitem{ohje} \emph{Fysiikan harjoitustyöt IIIA ja IIIB},s. B10, Turun yliopisto,
+Fysiikan laitos, 1999 
+\bibitem{maol} \emph{Maol-taulukot}, s.70, Otava, Keuruu 1993
+\bibitem{mon} Lähteenmäki, Minni, \emph{Mittaustulosten käsittelystä ja työturvallisuudesta
+fysiikan harjoitustöissä}, s.33, Turun yliopisto, 1986
+\end{thebibliography}
+
+
+\end{document}
+
