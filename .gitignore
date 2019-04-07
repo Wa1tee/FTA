@@ -2,6 +2,8 @@
 !.gitignore
 !README.md
 
+!labview
+!labview/*
 !images
 !images/*
 !office
